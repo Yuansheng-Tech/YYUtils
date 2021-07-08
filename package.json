@@ -27,7 +27,7 @@
     "url": "git+https://github.com/Yuansheng-Tech/YYUtils.git"
   },
   "license": "MIT",
-  "author": "colder",
+  "author": "Fu Yin",
   "main": "dist/index.js",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
