@@ -1,6 +1,6 @@
 # YY Utils
 
-[![NPM][npm-version-image]][npm-version-url] [![NPM Downloads][npm-downloads-image]][david-dm-url] [![License][license-image]][license-url]
+[![NPM][npm-version-image]][npm-version-url] [![NPM Downloads][npm-downloads-image]][npm-version-url] [![License][license-image]][license-url]
 
 > YYUtils 可能会出现较大改动并且不保证功能完整可用，请谨慎使用。
 ## 安装
