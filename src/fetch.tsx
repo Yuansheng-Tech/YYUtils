@@ -58,11 +58,12 @@ export const codeMessage = {
  */
 
 // @ts-ignore
-function fetch(url: string, data: object | string, method: keyof Taro.request.method | undefined): any;
+// function fetch(url: string, data: object | string, method: keyof Taro.request.method | undefined): any;
+// @ts-ignore
 function fetch({
-  url,
-  data,
-  method,
+  url = '',
+  data = {},
+  method = 'GET',
 }: {
   url: string;
   data: object | string;
