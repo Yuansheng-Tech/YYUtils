@@ -56,12 +56,19 @@ export const codeMessage = {
  * @param url
  * @param options https://taro-docs.jd.com/taro/docs/apis/network/request/request/
  */
-export const fetch = (options: {
+
+// @ts-ignore
+function fetch(url: string, data: object | string, method: keyof Taro.request.method | undefined): any;
+function fetch({
+  url,
+  data,
+  method,
+}: {
   url: string;
   data: object | string;
   method: keyof Taro.request.method | undefined;
-}) => {
-  let { url = '', data, method = 'GET' } = options;
+}): any {
+  // const { url = '', data, method = 'GET' } = options;
   /** 混存数据获取 进入小程序的时候 判断时间戳，从而判断是否请求数据 */
   // urlKey = `${method} ${API_URL}${url}?${qs.stringify(data)}`;
   // if (method === 'GET' && !!store.get(urlKey)) {
@@ -97,7 +104,7 @@ export const fetch = (options: {
     .catch((err) => {
       return fatchCallback(err);
     });
-};
+}
 
 const fatchCallback = (res) => {
   const {
@@ -168,4 +175,5 @@ const fatchCallback = (res) => {
   }
 };
 
+export { fetch };
 export default fetch;
