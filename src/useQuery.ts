@@ -89,7 +89,7 @@ export const useQuery = (query: DataProviderQuery, options: UseQueryOptions): Us
       method: method,
     })
       .then((result) => {
-        console.log('result', result);
+        // console.log('result', result);
         // const {
         //   data
         // } = result

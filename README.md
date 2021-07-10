@@ -3,12 +3,15 @@
 [![NPM][npm-version-image]][npm-version-url] [![NPM Downloads][npm-downloads-image]][npm-version-url] [![License][license-image]][license-url]
 
 > YYUtils 可能会出现较大改动并且不保证功能完整可用，请谨慎使用。
+
 ## 安装
 
 在项目中安装 YYUtils
 
 ```bash
 npm install @ysyp/utils
+
+Taro.setStorageSync('API_URL', 'https://api.yuansheng.com/api')
 ```
 
 ## 使用
@@ -16,15 +19,13 @@ npm install @ysyp/utils
 在代码中 `import` 需要的组件并按照文档说明使用
 
 ```js
-import {
-  Query,
-  useQuery
-} from '@ysyp/utils'
+import { Query, useQuery } from '@ysyp/utils';
 ```
 
 ## 开发交流
 
-[官方微信交流群](https://github.com/Yuansheng-Tech/YYUtils/issues)
+[Issues
+](https://github.com/Yuansheng-Tech/YYUtils/issues)
 
 ## 开发计划
 

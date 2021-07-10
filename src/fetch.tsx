@@ -42,24 +42,16 @@ export const codeMessage = {
   503: '服务不可用，服务器暂时过载或维护。',
   504: '网关超时。',
 };
-// require('../../src/baseUrl').URL_API ||
-// import * as baseUrl from '../../src/baseUrl'
 
-// const API_URL = baseUrl.URL_API || 'http://api.yuansheng.com';
-
-// console.log('API_URL', API_URL);
-
-// let urlKey = ''
 /**
  * Fetch
+ *
+ * Const API_URL = Taro.getStorageSync('API_URL') || '';
  *
  * @param url
  * @param options https://taro-docs.jd.com/taro/docs/apis/network/request/request/
  */
 
-// @ts-ignore
-// function fetch(url: string, data: object | string, method: keyof Taro.request.method | undefined): any;
-// @ts-ignore
 function fetch({
   url = '',
   data = {},
@@ -69,24 +61,15 @@ function fetch({
   data: object | string;
   method: keyof Taro.request.method | undefined;
 }): any {
-  // const { url = '', data, method = 'GET' } = options;
-  /** 混存数据获取 进入小程序的时候 判断时间戳，从而判断是否请求数据 */
-  // urlKey = `${method} ${API_URL}${url}?${qs.stringify(data)}`;
-  // if (method === 'GET' && !!store.get(urlKey)) {
-  //   return store.get(urlKey)
-  // }
-
-  /** 正常的数据请求 */
-  // if (!/^(http|\/\/)/g.test(url)) {
-  //   url = `${API_URL}${url}`;
-  // }
+  const API_URL = Taro.getStorageSync('API_URL') || '';
+  url = `${API_URL}${url}`;
   if (method.toUpperCase() === 'GET' && typeof data === 'object' && Object.keys(data).length) {
     url = `${url}?${qs.stringify(data)}`;
     data = {};
   } else {
     data = JSON.stringify(data);
   }
-  console.log('url data', url, data);
+  // console.log('url data', url, data);
   return Taro.request({
     url,
     // mode: 'no-cors',
@@ -99,7 +82,7 @@ function fetch({
     },
   })
     .then((res) => {
-      console.log('res', res);
+      // console.log('res', res);
       return fatchCallback(res);
     })
     .catch((err) => {
@@ -119,7 +102,7 @@ const fatchCallback = (res) => {
   } = res;
   const statusCodeData = statusCode || status;
   const messageData = message || statusText || error;
-  console.log('res', res);
+
   if (!res) {
     Taro.showToast({
       title: '未知错误',
@@ -127,6 +110,7 @@ const fatchCallback = (res) => {
     });
     return {};
   }
+
   // 保存本地数据
   if (res && statusCodeData === HTTP_STATUS.NOT_FOUND) {
     Taro.showToast({
