@@ -95,7 +95,7 @@ const fatchCallback = (res) => {
     status,
     statusText,
     error,
-    data: { statusCode, message, data } = {
+    data: { statusCode, message, data = undefined } = {
       statusCode: '',
       message: '',
     },

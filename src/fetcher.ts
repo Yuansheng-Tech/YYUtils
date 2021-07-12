@@ -1,3 +1,5 @@
+import fetch from './fetch';
+
 export const fetcher = async (
   url: string = '',
   data: {
@@ -7,7 +9,7 @@ export const fetcher = async (
       [key: string]: 'ASC' | 'DESC';
     };
   } = {},
-  method = 'GET'
+  method: keyof Taro.request.method = 'GET'
 ) => {
   return await fetch({ url, data, method });
 };
