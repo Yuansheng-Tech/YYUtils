@@ -58,8 +58,8 @@ function fetch({
   method = 'GET',
 }: {
   url: string;
-  data: object | string;
-  method: keyof Taro.request.method | undefined;
+  data?: object | string;
+  method?: keyof Taro.request.method | undefined;
 }): any {
   const API_URL = Taro.getStorageSync('API_URL') || '';
   url = `${API_URL}${url}`;
