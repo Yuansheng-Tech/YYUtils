@@ -1,15 +1,13 @@
-import fetch from './fetch';
-export const fetcher = (
-  url: string,
+export const fetcher = async (
+  url: string = '',
   data: {
     skip?: number;
     take?: number;
     order?: {
       [key: string]: 'ASC' | 'DESC';
     };
-  },
-  method
+  } = {},
+  method = 'GET'
 ) => {
-  console.log('url, data, method', url, data, method);
-  return fetch({ url, data, method });
+  return await fetch({ url, data, method });
 };

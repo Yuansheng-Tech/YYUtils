@@ -82,7 +82,7 @@ function fetch({
     },
   })
     .then((res) => {
-      // console.log('res', res);
+      console.log('res', res);
       return fatchCallback(res);
     })
     .catch((err) => {
@@ -95,7 +95,7 @@ const fatchCallback = (res) => {
     status,
     statusText,
     error,
-    data: { statusCode, message } = {
+    data: { statusCode, message, data } = {
       statusCode: '',
       message: '',
     },
@@ -156,7 +156,7 @@ const fatchCallback = (res) => {
   } else if (res && statusCodeData >= 200 && statusCodeData < 300) {
     /** 本地缓存 */
     // store.set(urlKey, res.data);
-    return res.data;
+    return data;
   }
 };
 
