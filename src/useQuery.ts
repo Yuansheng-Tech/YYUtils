@@ -89,12 +89,8 @@ export const useQuery = (query: DataProviderQuery, options: UseQueryOptions): Us
       method: method,
     })
       .then((result) => {
-        // console.log('result', result);
-        // const {
-        //   data
-        // } = result
         setState({
-          ...result,
+          data: result.data,
           loading: false,
           loaded: true,
           refetch,

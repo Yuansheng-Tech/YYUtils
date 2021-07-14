@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 import { useQuery } from './useQuery';
 
-interface ChildrenFuncParams {
+export interface ChildrenFuncParams {
   data?: any;
   page?: {
     count: number;
@@ -15,7 +15,7 @@ interface ChildrenFuncParams {
 }
 
 interface Props {
-  children: (params: ChildrenFuncParams) => (JSX.Element | null);
+  children: (params: ChildrenFuncParams) => JSX.Element | null;
   url: string;
   method?: keyof Taro.request.method | undefined;
   body?: any;

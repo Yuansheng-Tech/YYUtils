@@ -61,15 +61,18 @@ function fetch({
   data?: object | string;
   method?: keyof Taro.request.method | undefined;
 }): any {
+  Taro.showLoading({
+    title: '加载中...',
+  });
   const API_URL = Taro.getStorageSync('API_URL') || '';
   url = `${API_URL}${url}`;
-  if (method.toUpperCase() === 'GET' && typeof data === 'object' && Object.keys(data).length) {
-    url = `${url}?${qs.stringify(data)}`;
+  if (method.toUpperCase() === 'GET') {
+    url = Object.keys(data).length && typeof data === 'object' ? `${url}?${qs.stringify(data)}` : url;
     data = {};
   } else {
     data = JSON.stringify(data);
   }
-  // console.log('url data', url, data);
+
   return Taro.request({
     url,
     // mode: 'no-cors',
@@ -91,17 +94,12 @@ function fetch({
 }
 
 const fatchCallback = (res) => {
-  const {
-    status,
-    statusText,
-    error,
-    data: { statusCode, message, data = undefined } = {
-      statusCode: '',
-      message: '',
-    },
-  } = res;
+  const { status, statusText, error, page, data: resultData } = res;
+  const { statusCode, message, data = undefined } = resultData;
   const statusCodeData = statusCode || status;
   const messageData = message || statusText || error;
+
+  Taro.hideLoading();
 
   if (!res) {
     Taro.showToast({
@@ -110,7 +108,6 @@ const fatchCallback = (res) => {
     });
     return {};
   }
-
   // 保存本地数据
   if (res && statusCodeData === HTTP_STATUS.NOT_FOUND) {
     Taro.showToast({
@@ -156,7 +153,7 @@ const fatchCallback = (res) => {
   } else if (res && statusCodeData >= 200 && statusCodeData < 300) {
     /** 本地缓存 */
     // store.set(urlKey, res.data);
-    return data;
+    return resultData;
   }
 };
 

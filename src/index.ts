@@ -8,6 +8,8 @@ export { getCurrentPageUrl } from './taroTools';
 export { Link } from './router';
 export { router } from './router';
 export * from './hooks';
+export * from './threejs';
+
 // export { createProvider, Provider } from './Provider'
 export { getProvider, setProvider } from './Store';
 
