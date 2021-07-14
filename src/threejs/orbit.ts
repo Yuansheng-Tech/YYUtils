@@ -751,7 +751,7 @@ export const registerOrbit = (THREE) => {
     function onMouseUp(event) {
       if (scope.enabled === false) return;
 
-      handleMouseUp(event);
+      handleMouseUp();
 
       document.removeEventListener('mousemove', onMouseMove, false);
       document.removeEventListener('mouseup', onMouseUp, false);
@@ -895,7 +895,7 @@ export const registerOrbit = (THREE) => {
     function onTouchEnd(event) {
       if (scope.enabled === false) return;
 
-      handleTouchEnd(event);
+      handleTouchEnd();
 
       scope.dispatchEvent(endEvent);
 

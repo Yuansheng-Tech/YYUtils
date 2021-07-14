@@ -155,7 +155,7 @@ export function registerGLTFLoader(THREE) {
                 break;
 
               case EXTENSIONS.KHR_MATERIALS_PBR_SPECULAR_GLOSSINESS:
-                extensions[extensionName] = new GLTFMaterialsPbrSpecularGlossinessExtension();
+                extensions[extensionName] = GLTFMaterialsPbrSpecularGlossinessExtension();
                 break;
 
               case EXTENSIONS.KHR_DRACO_MESH_COMPRESSION:
@@ -528,7 +528,7 @@ export function registerGLTFLoader(THREE) {
           return THREE.ShaderMaterial;
         },
 
-        extendParams: function (materialParams, materialDef, parser) {
+        extendParams: function (materialParams: any, materialDef, parser) {
           var pbrSpecularGlossiness = materialDef.extensions[this.name];
 
           var shader = THREE.ShaderLib['standard'];
@@ -970,6 +970,7 @@ export function registerGLTFLoader(THREE) {
       translation: 'position',
       rotation: 'quaternion',
       weights: 'morphTargetInfluences',
+      postion: '',
     };
 
     var INTERPOLATION = {
@@ -1112,19 +1113,19 @@ export function registerGLTFLoader(THREE) {
 
         // Clone morph target accessors before modifying them.
 
-        for (var i = 0, il = morphPositions.length; i < il; i++) {
+        for (let i: number = 0, il: number = morphPositions.length; i < il; i++) {
           if (geometry.attributes.position === morphPositions[i]) continue;
 
           morphPositions[i] = cloneBufferAttribute(morphPositions[i]);
         }
 
-        for (var i = 0, il = morphNormals.length; i < il; i++) {
+        for (let i: number = 0, il: number = morphNormals.length; i < il; i++) {
           if (geometry.attributes.normal === morphNormals[i]) continue;
 
           morphNormals[i] = cloneBufferAttribute(morphNormals[i]);
         }
 
-        for (var i = 0, il = targets.length; i < il; i++) {
+        for (let i = 0, il = targets.length; i < il; i++) {
           var target = targets[i];
           var attributeName = 'morphTarget' + i;
 
@@ -1274,7 +1275,7 @@ export function registerGLTFLoader(THREE) {
       this.options = options || {};
 
       // loader object cache
-      this.cache = new GLTFRegistry();
+      this.cache = GLTFRegistry();
 
       // BufferGeometry caching
       this.primitiveCache = {};
@@ -1690,7 +1691,7 @@ export function registerGLTFLoader(THREE) {
             loader.load(resolveURL(sourceURI, options.path), resolve, undefined, reject);
           });
         })
-        .then(function (texture) {
+        .then(function (texture: any) {
           // Clean up resources and configure Texture.
 
           if (isObjectURL === true) {
@@ -1868,7 +1869,7 @@ export function registerGLTFLoader(THREE) {
       var materialDef = json.materials[materialIndex];
 
       var materialType;
-      var materialParams = {};
+      var materialParams;
       var materialExtensions = materialDef.extensions || {};
 
       var pending = [];
@@ -2107,7 +2108,7 @@ export function registerGLTFLoader(THREE) {
         return parser.loadGeometries(primitives).then(function (geometries) {
           var meshes = [];
 
-          for (var i = 0, il = geometries.length; i < il; i++) {
+          for (var i: number = 0, il: number = geometries.length; i < il; i++) {
             var geometry = geometries[i];
             var primitive = primitives[i];
 
@@ -2232,8 +2233,8 @@ export function registerGLTFLoader(THREE) {
     GLTFParser.prototype.loadSkin = function (skinIndex) {
       var skinDef = this.json.skins[skinIndex];
 
-      var skinEntry = { joints: skinDef.joints };
-
+      var skinEntry;
+      skinEntry.joints = skinDef.joints;
       if (skinDef.inverseBindMatrices === undefined) {
         return Promise.resolve(skinEntry);
       }
@@ -2315,7 +2316,7 @@ export function registerGLTFLoader(THREE) {
               TypedKeyframeTrack = THREE.QuaternionKeyframeTrack;
               break;
 
-            case PATH_PROPERTIES.position:
+            // case PATH_PROPERTIES.position:
             case PATH_PROPERTIES.scale:
             default:
               TypedKeyframeTrack = THREE.VectorKeyframeTrack;
