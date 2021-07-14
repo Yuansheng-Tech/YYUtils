@@ -59,7 +59,7 @@ function fetch({
 }: {
   url: string;
   data?: object | string;
-  method?: keyof Taro.request.method | undefined;
+  method?: keyof Taro.request.method;
 }): any {
   Taro.showLoading({
     title: '加载中...',
