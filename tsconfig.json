@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "module": "ES2020",
-    "moduleResolution": "Node",
+    "target": "es2017",
+    "module": "commonjs",
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "importsNotUsedAsValues": "remove",
@@ -16,7 +20,7 @@
     "incremental": true,
     "forceConsistentCasingInFileNames": true,
     "rootDir": "./src",
-    "outDir": "./dist"
+    "outDir": "./dist",
   },
   "include": ["src"],
   "exclude": ["node_modules"],
