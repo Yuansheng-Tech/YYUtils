@@ -40,7 +40,6 @@
     "prebuild": "del dist/* tsconfig.tsbuildinfo",
     "build": "tsc -p tsconfig.json",
     "docs": "typedoc",
-    "prepublish": "npm run build",
     "release": "np"
   },
   "husky": {
