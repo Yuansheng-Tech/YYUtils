@@ -95,7 +95,7 @@ function fetch({
 
 const fatchCallback = (res) => {
   const { status, statusText, error, page, data: resultData } = res;
-  const { statusCode, message, data = undefined } = resultData;
+  const { statusCode, message, data = undefined } = resultData || {};
   const statusCodeData = statusCode || status;
   const messageData = message || statusText || error;
 

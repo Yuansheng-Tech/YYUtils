@@ -29,19 +29,18 @@
   "license": "MIT",
   "author": "Fu Yin",
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
   "files": [
-    "dist",
-    "docs",
-    "style",
-    "babel.js"
+    "dist/"
   ],
   "scripts": {
     "start": "tsc -w --preserveWatchOutput",
     "prebuild": "del dist/* tsconfig.tsbuildinfo",
-    "build": "tsc",
+    "build": "tsc -p tsconfig.json",
     "docs": "typedoc",
+    "prepublish": "npm run build",
     "release": "np"
   },
   "husky": {

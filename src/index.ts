@@ -7,8 +7,12 @@ export { useQuery } from './useQuery';
 export { getCurrentPageUrl } from './taroTools';
 export { Link } from './router';
 export { router } from './router';
+
 export * from './hooks';
+
 export * from './threejs';
+
+export { openVoice } from './W-baiduyy';
 
 // export { createProvider, Provider } from './Provider'
 export { getProvider, setProvider } from './Store';
