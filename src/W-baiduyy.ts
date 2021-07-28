@@ -3,8 +3,8 @@ const audioTeam = [];
 let audioStartSwitch = false;
 const getAudioUrl = 'https://tsn.baidu.com/text2audio';
 /**
- * 浏览器调用语音合成接口 请参考 https://ai.baidu.com/docs#/TTS-API/41ac79a6 强烈建议后端访问接口获取token返回给前端 client_id = API Key &
- * client_secret = secret Key 获取token接口:
+ * Copy from https://github.com/HuLuoQian/QS-baiduyy 浏览器调用语音合成接口 请参考 https://ai.baidu.com/docs#/TTS-API/41ac79a6
+ * 强烈建议后端访问接口获取token返回给前端 client_id = API Key & client_secret = secret Key 获取token接口:
  * https://openapi.baidu.com/oauth/2.0/token?grant_type=client_credentials&client_id=uFYiXWMCiYvx68V4EVyCGeL8j4GAzXD5&client_secret=897Mm2qCj7bC1eHYVDxaWrO38FscTOHD
  */
 
