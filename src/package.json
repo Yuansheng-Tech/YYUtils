@@ -1,0 +1,117 @@
+{
+  "name": "@ysyp/stores",
+  "version": "0.2.4",
+  "description": "Taro UI for e-commerce system.",
+  "keywords": [
+    "taro",
+    "react",
+    "reactjs",
+    "wx",
+    "weixin",
+    "wechat",
+    "weapp",
+    "wechat-mini-program",
+    "javascript",
+    "typescript",
+    "stores",
+    "mobx"
+  ],
+  "homepage": "https://github.com/Yuansheng-Tech/YYStores",
+  "bugs": {
+    "url": "https://github.com/Yuansheng-Tech/YYStores/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yuansheng-Tech/YYStores.git"
+  },
+  "license": "MIT",
+  "author": "Fu Yin",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "docs",
+    "style",
+    "babel.js"
+  ],
+  "scripts": {
+    "start": "tsc -w --preserveWatchOutput",
+    "prebuild": "del dist/* tsconfig.tsbuildinfo",
+    "build": "tsc",
+    "docs": "typedoc",
+    "release": "np",
+    "test": ""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -x @commitlint/config-conventional -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,jsx,ts,tsx,md,html,css,scss}": "prettier --write"
+  },
+  "browserslist": {
+    "production": [
+      "last 3 versions",
+      "Android >= 4.1",
+      "ios >= 8"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "@tarojs/components": "^3.3.2",
+    "@tarojs/taro": "^3.3.2",
+    "@ysyp/ui": "^0.1.6",
+    "js-cookie": "^2.2.1",
+    "lodash.mapvalues": "^4.6.0",
+    "lodash.set": "^4.3.2",
+    "mobx": "^6.3.2",
+    "mobx-react": "^7.2.0",
+    "qs": "^6.10.1",
+    "query-string": "^7.0.1",
+    "react": "^17.0.2",
+    "react-query": "^3.18.1",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@tarojs/components": "^3.2.7",
+    "@tarojs/taro": "^3.2.7",
+    "@types/classnames": "^2.3.1",
+    "@types/lodash": "^4.14.170",
+    "@types/node": "^14.17.0",
+    "@types/react": "^16.14.6",
+    "@types/react-is": "^16.7.2",
+    "del-cli": "^3.0.1",
+    "husky": "^4.3.8",
+    "lint-staged": "^11.0.0",
+    "np": "^7.5.0",
+    "prettier": "^2.3.0",
+    "prettier-plugin-jsdoc": "^0.3.22",
+    "prettier-plugin-packagejson": "^2.2.11",
+    "tslib": "^2.2.0",
+    "typedoc": "^0.20.36",
+    "typedoc-plugin-markdown": "^3.10.2",
+    "typescript": "^4.2.4"
+  },
+  "peerDependencies": {},
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "np": {
+    "yarn": false
+  }
+}
