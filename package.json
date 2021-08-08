@@ -1,6 +1,6 @@
 {
   "name": "@ysyp/utils",
-  "version": "0.3.14",
+  "version": "0.3.15",
   "description": "Taro UI for e-commerce system.",
   "keywords": [
     "taro",
@@ -80,7 +80,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/config-conventional": "^13.1.0",
     "@types/classnames": "^2.3.1",
     "@types/lodash": "^4.14.170",
     "@types/node": "^14.17.0",
