@@ -1,4 +1,4 @@
-import Taro from '@tarojs/taro';
+import Taro from '../taro';
 
 export function renderCube(canvas, THREE) {
   var camera, scene, renderer;

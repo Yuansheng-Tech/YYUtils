@@ -17,7 +17,7 @@ export interface ChildrenFuncParams {
 interface Props {
   children: (params: ChildrenFuncParams) => JSX.Element | null;
   url: string;
-  method?: keyof Taro.request.method | undefined;
+  method?: string; // keyof Taro.request.method | undefined;
   body?: any;
   options?: any;
 }

@@ -1,4 +1,4 @@
-import Taro from '@tarojs/taro';
+import Taro from './taro';
 import * as qs from 'qs';
 import Cookies from 'js-cookie';
 import { getCurrentPageUrl } from './taroTools';
@@ -59,7 +59,7 @@ function fetch({
 }: {
   url: string;
   data?: object | string;
-  method?: keyof Taro.request.method;
+  method?: string; // keyof Taro.request.method;
 }): any {
   Taro.showLoading({
     title: '加载中...',
@@ -86,7 +86,6 @@ function fetch({
     },
   })
     .then((res) => {
-      console.log('res', res);
       return fatchCallback(res);
     })
     .catch((err) => {

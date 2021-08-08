@@ -14,7 +14,6 @@ export * from './threejs';
 
 export { openVoice } from './W-baiduyy';
 
-// export { createProvider, Provider } from './Provider'
 export { getProvider, setProvider } from './Store';
 
 import Url from './url';

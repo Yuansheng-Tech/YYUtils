@@ -20,7 +20,7 @@
     "incremental": true,
     "forceConsistentCasingInFileNames": true,
     "rootDir": "./src",
-    "outDir": "./dist",
+    "outDir": "./dist"
   },
   "include": ["src"],
   "exclude": ["node_modules"],

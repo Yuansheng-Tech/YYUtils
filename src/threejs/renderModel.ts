@@ -1,6 +1,6 @@
 import { registerGLTFLoader } from './gltf-loader';
 import { registerOrbit } from './orbit';
-import Taro from '@tarojs/taro';
+import Taro from '../taro';
 
 export function renderModel(
   canvas,

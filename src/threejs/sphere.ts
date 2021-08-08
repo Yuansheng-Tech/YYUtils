@@ -1,4 +1,4 @@
-import Taro from '@tarojs/taro';
+import Taro from '../taro';
 
 export function renderSphere(canvas, THREE) {
   var container, stats;

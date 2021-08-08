@@ -1,4 +1,4 @@
-import Taro from '@tarojs/taro';
+import Taro from './taro';
 
 export function getCurrentPageUrl() {
   let pages = Taro.getCurrentPages();
