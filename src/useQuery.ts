@@ -1,8 +1,9 @@
 import React, { useCallback, useState, useEffect, useRef } from 'react';
+import Taro from '@tarojs/taro';
 import fetch from './fetch';
 
 export interface DataProviderQuery {
-  method: string; // keyof Taro.request.method | undefined;
+  method: keyof Taro.request.method | undefined;
   url: string;
   body: object;
 }

@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react';
+import Taro from '@tarojs/taro';
 import { useQuery } from './useQuery';
 
 export interface ChildrenFuncParams {
@@ -17,7 +18,7 @@ export interface ChildrenFuncParams {
 interface Props {
   children: (params: ChildrenFuncParams) => JSX.Element | null;
   url: string;
-  method?: string; // keyof Taro.request.method | undefined;
+  method?: keyof Taro.request.method | undefined;
   body?: any;
   options?: any;
 }
