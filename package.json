@@ -1,6 +1,6 @@
 {
   "name": "@ysyp/utils",
-  "version": "0.3.25",
+  "version": "0.3.26",
   "description": "Taro UI for e-commerce system.",
   "keywords": [
     "taro",
@@ -41,7 +41,7 @@
     "build": "tsc -p tsconfig.json",
     "docs": "typedoc",
     "test": "",
-    "release": "np"
+    "release": "np --no-verify"
   },
   "husky": {
     "hooks": {
