@@ -1,5 +1,5 @@
 import qs from 'query-string';
-import Taro from '@tarojs/taro';
+import Taro from './taro';
 
 class Url {
   /** 基本路径，可 new 的时候传入 */

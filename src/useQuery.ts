@@ -1,5 +1,5 @@
 import React, { useCallback, useState, useEffect, useRef } from 'react';
-import Taro from '@tarojs/taro';
+import Taro from './taro';
 import fetch from './fetch';
 
 export interface DataProviderQuery {

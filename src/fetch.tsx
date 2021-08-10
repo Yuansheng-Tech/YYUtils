@@ -1,4 +1,4 @@
-import Taro from '@tarojs/taro';
+import Taro from './taro';
 import * as qs from 'qs';
 import Cookies from 'js-cookie';
 import { getCurrentPageUrl } from './taroTools';
