@@ -41,7 +41,7 @@
     "build": "tsc -p tsconfig.json",
     "docs": "typedoc",
     "test": "",
-    "release": "np --no-verify"
+    "release": "np"
   },
   "husky": {
     "hooks": {
