@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import Taro from './taro';
+import Taro from '@tarojs/taro';
 import { useQuery } from './useQuery';
 
 export interface ChildrenFuncParams {

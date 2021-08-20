@@ -1,4 +1,4 @@
-import Taro from './taro';
+import Taro from '@tarojs/taro';
 const audioTeam = [];
 let audioStartSwitch = false;
 const getAudioUrl = 'https://tsn.baidu.com/text2audio';
