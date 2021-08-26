@@ -229,21 +229,21 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
-"@tarojs/api@3.3.3":
-  version "3.3.3"
-  resolved "https://registry.nlark.com/@tarojs/api/download/@tarojs/api-3.3.3.tgz?cache=0&sync_timestamp=1628755556843&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40tarojs%2Fapi%2Fdownload%2F%40tarojs%2Fapi-3.3.3.tgz#8e1f96418f1b7252ebb0ce7afd66016ac1b50d56"
-  integrity sha1-jh+WQY8bclLrsM56/WYBasG1DVY=
+"@tarojs/api@3.3.4":
+  version "3.3.4"
+  resolved "https://registry.nlark.com/@tarojs/api/download/@tarojs/api-3.3.4.tgz#41bd205584bda21d3608df2f9194dcafa691bb0a"
+  integrity sha1-Qb0gVYS9oh02CN8vkZTcr6aRuwo=
   dependencies:
     "@babel/runtime" "^7.11.2"
-    "@tarojs/runtime" "3.3.3"
+    "@tarojs/runtime" "3.3.4"
 
-"@tarojs/components@^3.3.3":
-  version "3.3.3"
-  resolved "https://registry.nlark.com/@tarojs/components/download/@tarojs/components-3.3.3.tgz?cache=0&sync_timestamp=1628756507053&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40tarojs%2Fcomponents%2Fdownload%2F%40tarojs%2Fcomponents-3.3.3.tgz#4c7d30c79229a252acd9dad7a14134ed069f2405"
-  integrity sha1-TH0wx5IpolKs2drXoUE07QafJAU=
+"@tarojs/components@^3.3.4":
+  version "3.3.4"
+  resolved "https://registry.nlark.com/@tarojs/components/download/@tarojs/components-3.3.4.tgz#db4e4f3c7c988c199d2b2ecafaa3633f1b112792"
+  integrity sha1-205PPHyYjBmdKy7K+qNjPxsRJ5I=
   dependencies:
     "@stencil/core" "2.4.0"
-    "@tarojs/taro" "3.3.3"
+    "@tarojs/taro" "3.3.4"
     better-scroll "^1.14.1"
     classnames "^2.2.5"
     intersection-observer "^0.7.0"
@@ -252,40 +252,40 @@
     swiper "6.8.0"
     weui "^1.1.2"
 
-"@tarojs/router@3.3.3":
-  version "3.3.3"
-  resolved "https://registry.nlark.com/@tarojs/router/download/@tarojs/router-3.3.3.tgz?cache=0&sync_timestamp=1628755559236&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40tarojs%2Frouter%2Fdownload%2F%40tarojs%2Frouter-3.3.3.tgz#f22c8bbc8f913b6cd7b01ed42fe55b99806ac7c2"
-  integrity sha1-8iyLvI+RO2zXsB7UL+VbmYBqx8I=
+"@tarojs/router@3.3.4":
+  version "3.3.4"
+  resolved "https://registry.nlark.com/@tarojs/router/download/@tarojs/router-3.3.4.tgz#5938fca0a9feda1c101531dce506731d3c2d60ff"
+  integrity sha1-WTj8oKn+2hwQFTHc5QZzHTwtYP8=
   dependencies:
-    "@tarojs/runtime" "3.3.3"
+    "@tarojs/runtime" "3.3.4"
     history "^5.0.0"
     query-string "^6.13.8"
     universal-router "^8.3.0"
     url-parse "^1.4.7"
 
-"@tarojs/runtime@3.3.3":
-  version "3.3.3"
-  resolved "https://registry.nlark.com/@tarojs/runtime/download/@tarojs/runtime-3.3.3.tgz?cache=0&sync_timestamp=1628755557653&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40tarojs%2Fruntime%2Fdownload%2F%40tarojs%2Fruntime-3.3.3.tgz#f5ec81f2ba8a4de6fb5254a38439113d08d0b285"
-  integrity sha1-9eyB8rqKTeb7UlSjhDkRPQjQsoU=
+"@tarojs/runtime@3.3.4":
+  version "3.3.4"
+  resolved "https://registry.nlark.com/@tarojs/runtime/download/@tarojs/runtime-3.3.4.tgz#a96b8b27b322932a21b024912a1cea46a79139f7"
+  integrity sha1-qWuLJ7MikyohsCSRKhzqRqeROfc=
   dependencies:
-    "@tarojs/shared" "3.3.3"
+    "@tarojs/shared" "3.3.4"
     inversify "5.1.1"
     lodash-es "4.17.15"
     reflect-metadata "^0.1.13"
 
-"@tarojs/shared@3.3.3":
-  version "3.3.3"
-  resolved "https://registry.nlark.com/@tarojs/shared/download/@tarojs/shared-3.3.3.tgz#63448dd7d161e3bd42833b4666701450d451b1b3"
-  integrity sha1-Y0SN19Fh471CgztGZnAUUNRRsbM=
+"@tarojs/shared@3.3.4":
+  version "3.3.4"
+  resolved "https://registry.nlark.com/@tarojs/shared/download/@tarojs/shared-3.3.4.tgz#adb97c88dc0589a4c9fd3969ff0b05cc15d13d41"
+  integrity sha1-rbl8iNwFiaTJ/Tlp/wsFzBXRPUE=
 
-"@tarojs/taro-h5@3.3.3":
-  version "3.3.3"
-  resolved "https://registry.nlark.com/@tarojs/taro-h5/download/@tarojs/taro-h5-3.3.3.tgz?cache=0&sync_timestamp=1628755549393&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40tarojs%2Ftaro-h5%2Fdownload%2F%40tarojs%2Ftaro-h5-3.3.3.tgz#09305b0128771f6d59e8b1f21b644ecd42c1f2c0"
-  integrity sha1-CTBbASh3H21Z6LHyG2ROzULB8sA=
+"@tarojs/taro-h5@3.3.4":
+  version "3.3.4"
+  resolved "https://registry.nlark.com/@tarojs/taro-h5/download/@tarojs/taro-h5-3.3.4.tgz#454928d351b50a1134b21513cd69e4666b17e195"
+  integrity sha1-RUko01G1ChE0shUTzWnkZmsX4ZU=
   dependencies:
-    "@tarojs/api" "3.3.3"
-    "@tarojs/router" "3.3.3"
-    "@tarojs/runtime" "3.3.3"
+    "@tarojs/api" "3.3.4"
+    "@tarojs/router" "3.3.4"
+    "@tarojs/runtime" "3.3.4"
     base64-js "^1.3.0"
     jsonp-retry "^1.0.3"
     mobile-detect "^1.4.2"
@@ -302,18 +302,18 @@
     lodash "^4.17.10"
     prop-types "^15.6.1"
 
-"@tarojs/taro@3.3.3", "@tarojs/taro@^3.3.3":
-  version "3.3.3"
-  resolved "https://registry.nlark.com/@tarojs/taro/download/@tarojs/taro-3.3.3.tgz?cache=0&sync_timestamp=1628755547729&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40tarojs%2Ftaro%2Fdownload%2F%40tarojs%2Ftaro-3.3.3.tgz#b94f29090f35ce22b9bba149551e4d5fcf0fe525"
-  integrity sha1-uU8pCQ81ziK5u6FJVR5NX88P5SU=
+"@tarojs/taro@3.3.4", "@tarojs/taro@^3.3.4":
+  version "3.3.4"
+  resolved "https://registry.nlark.com/@tarojs/taro/download/@tarojs/taro-3.3.4.tgz#d488280cd5449278c06fe23ed6ee0ebf727f77e1"
+  integrity sha1-1IgoDNVEknjAb+I+1u4Ov3J/d+E=
   dependencies:
-    "@tarojs/api" "3.3.3"
-    "@tarojs/runtime" "3.3.3"
-    "@tarojs/taro-h5" "3.3.3"
+    "@tarojs/api" "3.3.4"
+    "@tarojs/runtime" "3.3.4"
+    "@tarojs/taro-h5" "3.3.4"
 
 "@tarojs/taro@^2.2.10":
   version "2.2.17"
-  resolved "https://registry.nlark.com/@tarojs/taro/download/@tarojs/taro-2.2.17.tgz?cache=0&sync_timestamp=1628755547729&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40tarojs%2Ftaro%2Fdownload%2F%40tarojs%2Ftaro-2.2.17.tgz#78a95dc4e91ab4e4580205464ae684f32b612fa4"
+  resolved "https://registry.nlark.com/@tarojs/taro/download/@tarojs/taro-2.2.17.tgz#78a95dc4e91ab4e4580205464ae684f32b612fa4"
   integrity sha1-eKldxOkatORYAgVGSuaE8ythL6Q=
   dependencies:
     "@tarojs/utils" "2.2.17"
@@ -388,14 +388,14 @@
   integrity sha1-7nceK6Sz3Fs3KTXVSf2WF780W4w=
 
 "@types/node@*":
-  version "16.7.1"
-  resolved "https://registry.nlark.com/@types/node/download/@types/node-16.7.1.tgz#c6b9198178da504dfca1fd0be9b2e1002f1586f0"
-  integrity sha1-xrkZgXjaUE38of0L6bLhAC8VhvA=
+  version "16.7.2"
+  resolved "https://registry.nlark.com/@types/node/download/@types/node-16.7.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-16.7.2.tgz#0465a39b5456b61a04d98bd5545f8b34be340cb7"
+  integrity sha1-BGWjm1RWthoE2YvVVF+LNL40DLc=
 
 "@types/node@^14.17.0":
-  version "14.17.11"
-  resolved "https://registry.nlark.com/@types/node/download/@types/node-14.17.11.tgz#82d266d657aec5ff01ca59f2ffaff1bb43f7bf0f"
-  integrity sha1-gtJm1leuxf8Bylny/6/xu0P3vw8=
+  version "14.17.12"
+  resolved "https://registry.nlark.com/@types/node/download/@types/node-14.17.12.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.17.12.tgz#7a31f720b85a617e54e42d24c4ace136601656c7"
+  integrity sha1-ejH3ILhaYX5U5C0kxKzhNmAWVsc=
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -412,17 +412,17 @@
   resolved "https://registry.nlark.com/@types/prop-types/download/@types/prop-types-15.7.4.tgz?cache=0&sync_timestamp=1629708789374&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fprop-types%2Fdownload%2F%40types%2Fprop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha1-/PcgXCXf95Xuea8eMNosl5CAjxE=
 
-"@types/react-is@^16.7.2":
-  version "16.7.2"
-  resolved "https://registry.nlark.com/@types/react-is/download/@types/react-is-16.7.2.tgz?cache=0&sync_timestamp=1629708876748&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Freact-is%2Fdownload%2F%40types%2Freact-is-16.7.2.tgz#8c2862013d00d741be189ceb71da8e8d21e8fa7d"
-  integrity sha1-jChiAT0A10G+GJzrcdqOjSHo+n0=
+"@types/react-is@^17.0.2":
+  version "17.0.2"
+  resolved "https://registry.nlark.com/@types/react-is/download/@types/react-is-17.0.2.tgz?cache=0&sync_timestamp=1629708876748&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Freact-is%2Fdownload%2F%40types%2Freact-is-17.0.2.tgz#abc4d910bff5b0bc6b3e1bec57575f6b63fd4e05"
+  integrity sha1-q8TZEL/1sLxrPhvsV1dfa2P9TgU=
   dependencies:
-    "@types/react" "^16"
+    "@types/react" "*"
 
-"@types/react@^16", "@types/react@^16.14.6":
-  version "16.14.14"
-  resolved "https://registry.nlark.com/@types/react/download/@types/react-16.14.14.tgz#853de95a32a6a0e719192e222eacad024add2b8e"
-  integrity sha1-hT3pWjKmoOcZGS4iLqytAkrdK44=
+"@types/react@*", "@types/react@^17.0.2":
+  version "17.0.19"
+  resolved "https://registry.nlark.com/@types/react/download/@types/react-17.0.19.tgz#8f2a85e8180a43b57966b237d26a29481dacc991"
+  integrity sha1-jyqF6BgKQ7V5ZrI30mopSB2syZE=
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -2641,14 +2641,14 @@ p-limit@^3.0.2:
 
 p-locate@^4.1.0:
   version "4.1.0"
-  resolved "https://registry.nlark.com/p-locate/download/p-locate-4.1.0.tgz#a3428bb7088b3a60292f66919278b7c297ad4f07"
+  resolved "https://registry.nlark.com/p-locate/download/p-locate-4.1.0.tgz?cache=0&sync_timestamp=1629892761309&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fp-locate%2Fdownload%2Fp-locate-4.1.0.tgz#a3428bb7088b3a60292f66919278b7c297ad4f07"
   integrity sha1-o0KLtwiLOmApL2aRkni3wpetTwc=
   dependencies:
     p-limit "^2.2.0"
 
 p-locate@^5.0.0:
   version "5.0.0"
-  resolved "https://registry.nlark.com/p-locate/download/p-locate-5.0.0.tgz#83c8315c6785005e3bd021839411c9e110e6d834"
+  resolved "https://registry.nlark.com/p-locate/download/p-locate-5.0.0.tgz?cache=0&sync_timestamp=1629892761309&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fp-locate%2Fdownload%2Fp-locate-5.0.0.tgz#83c8315c6785005e3bd021839411c9e110e6d834"
   integrity sha1-g8gxXGeFAF470CGDlBHJ4RDm2DQ=
   dependencies:
     p-limit "^3.0.2"
@@ -2829,7 +2829,7 @@ progress@^2.0.3:
   resolved "https://registry.npm.taobao.org/progress/download/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha1-foz42PW48jnBvGi+tOt4Vn1XLvg=
 
-prop-types@^15.6.1, prop-types@^15.6.2:
+prop-types@^15.6.1:
   version "15.7.2"
   resolved "https://registry.npm.taobao.org/prop-types/download/prop-types-15.7.2.tgz?cache=0&sync_timestamp=1615984425557&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fprop-types%2Fdownload%2Fprop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha1-UsQedbjIfnK52TYOAga5ncv/psU=
@@ -2919,17 +2919,16 @@ rc@^1.2.8:
 
 react-is@^16.8.1:
   version "16.13.1"
-  resolved "https://registry.nlark.com/react-is/download/react-is-16.13.1.tgz?cache=0&sync_timestamp=1629821771570&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-is%2Fdownload%2Freact-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
+  resolved "https://registry.nlark.com/react-is/download/react-is-16.13.1.tgz?cache=0&sync_timestamp=1629908267286&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-is%2Fdownload%2Freact-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
 
-react@^16.13.1:
-  version "16.14.0"
-  resolved "https://registry.nlark.com/react/download/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
-  integrity sha1-lNd23dCqo32j7aj8W2sYpMmjEU0=
+react@^17.0.2:
+  version "17.0.2"
+  resolved "https://registry.nlark.com/react/download/react-17.0.2.tgz?cache=0&sync_timestamp=1629908199697&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact%2Fdownload%2Freact-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
+  integrity sha1-0LXMUW0p6z7uOD91tihkz7aAADc=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    prop-types "^15.6.2"
 
 read-pkg-up@^7.0.1:
   version "7.0.1"
@@ -3301,7 +3300,7 @@ split@^1.0.1:
 
 ssr-window@^3.0.0, ssr-window@^3.0.0-alpha.1:
   version "3.0.0"
-  resolved "https://registry.nlark.com/ssr-window/download/ssr-window-3.0.0.tgz?cache=0&sync_timestamp=1628092116310&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fssr-window%2Fdownload%2Fssr-window-3.0.0.tgz#fd5b82801638943e0cc704c4691801435af7ac37"
+  resolved "https://registry.nlark.com/ssr-window/download/ssr-window-3.0.0.tgz#fd5b82801638943e0cc704c4691801435af7ac37"
   integrity sha1-/VuCgBY4lD4MxwTEaRgBQ1r3rDc=
 
 strict-uri-encode@^2.0.0:
@@ -3439,7 +3438,7 @@ supports-hyperlinks@^2.0.0:
 
 swiper@6.8.0:
   version "6.8.0"
-  resolved "https://registry.nlark.com/swiper/download/swiper-6.8.0.tgz#61c850f49ba778e403f00a01fe0b768bd85d0d20"
+  resolved "https://registry.nlark.com/swiper/download/swiper-6.8.0.tgz?cache=0&sync_timestamp=1629966800918&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fswiper%2Fdownload%2Fswiper-6.8.0.tgz#61c850f49ba778e403f00a01fe0b768bd85d0d20"
   integrity sha1-YchQ9JuneOQD8AoB/gt2i9hdDSA=
   dependencies:
     dom7 "^3.0.0"
@@ -3595,7 +3594,7 @@ typedoc@^0.20.36:
 
 typescript@^4.2.4:
   version "4.3.5"
-  resolved "https://registry.nlark.com/typescript/download/typescript-4.3.5.tgz?cache=0&sync_timestamp=1629789466300&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftypescript%2Fdownload%2Ftypescript-4.3.5.tgz#4d1c37cc16e893973c45a06886b7113234f119f4"
+  resolved "https://registry.nlark.com/typescript/download/typescript-4.3.5.tgz?cache=0&sync_timestamp=1629962324847&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftypescript%2Fdownload%2Ftypescript-4.3.5.tgz#4d1c37cc16e893973c45a06886b7113234f119f4"
   integrity sha1-TRw3zBbok5c8RaBohrcRMjTxGfQ=
 
 uglify-js@^3.1.4:
