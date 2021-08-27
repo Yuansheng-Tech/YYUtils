@@ -4,20 +4,17 @@ import { Button } from '@tarojs/components';
 
 export const router = {
   navigateTo(object: redirectTo.Option) {
-    console.log('process.env.TARO_ENV', process.env.TARO_ENV);
     if (process.env.TARO_ENV === 'h5') {
       location.href = /^(http(s)?:)?\/\//.test(object.url) ? object.url : `/#${object.url}`;
     } else {
-      // try {
-      //   this.switchTab(object)
-      // } catch(err) {
+      if (/^(http(s)?:)?\/\//.test(object.url)) {
+        object.url = `/subPackages/pages/webview/index?url=${object.url}`;
+      }
       if (Taro.getCurrentPages().length > 9) {
         Taro.redirectTo(object);
-        // this.reLaunch(object)
       } else {
         Taro.navigateTo(object);
       }
-      // }
     }
   },
   // 其他跳转不处理

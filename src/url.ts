@@ -8,7 +8,7 @@ class Url {
     if (process.env.TARO_ENV === 'h5') {
       this.url = !url ? window.location.href : url;
     } else {
-      this.url = !url ? Taro.getCurrentPages().pop().route : url;
+      this.url = !url ? Taro.getCurrentPages().pop()?.route : url;
     }
   }
   getUrl = () => {
