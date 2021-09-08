@@ -82,7 +82,7 @@ function fetch({
     header: {
       'content-type': 'application/json; charset=utf-8',
       Authorization: `Bearer ${Cookies.get('accessToken') || Taro.getStorageSync('accessToken')}`,
-      apikey: `Bearer ${Cookies.get('APIKey') || Taro.getStorageSync('APIKey')}`, // `APIKey xxxx`,
+      'X-Api-Key': `APIKey ${Cookies.get('APIKey') || Taro.getStorageSync('APIKey')}`, // `APIKey xxxx`,
     },
   })
     .then((res) => {
