@@ -66,6 +66,7 @@ function fetch({
   });
   const API_URL = Taro.getStorageSync('API_URL') || '';
   url = `${API_URL}${url}`;
+  console.log('url', url);
   if (method.toUpperCase() === 'GET') {
     url = Object.keys(data).length && typeof data === 'object' ? `${url}?${qs.stringify(data)}` : url;
     data = {};

@@ -68,6 +68,9 @@
     "printWidth": 120,
     "singleQuote": true
   },
+  "dependencies": {
+    "lodash.mapkeys": "^4.6.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^13.1.0",
