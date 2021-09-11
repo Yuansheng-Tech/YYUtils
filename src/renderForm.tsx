@@ -13,7 +13,8 @@ interface IRenderForm {
   form: any;
   onChange: (
     key: string,
-    index: number
+    index: number,
+    data?: number
     // method: 'DELETE' | 'ADD' | 'REPLACE'
   ) => void;
   disabled: boolean;
@@ -24,7 +25,8 @@ type IRenderObjectMap = {
   form: any;
   onChange: (
     key: string,
-    index: number
+    index: number,
+    data?: any
     // method: 'DELETE' | 'ADD' | 'REPLACE'
   ) => void;
   disabled?: boolean;
@@ -36,7 +38,6 @@ export function renderForm({ data, key, index, form, onChange, disabled = false 
   const { getFieldProps } = form;
   let result;
 
-  // !types[key] && (types[key] = typeof data);
   types[key] = typeof data;
   if (typeof data === 'string' && /^[\[\{]/g.test(data)) {
     types[key] = 'code';
@@ -57,7 +58,7 @@ export function renderForm({ data, key, index, form, onChange, disabled = false 
           {...getFieldProps(key)}
           value={data}
           placeholder={key}
-          onChange={() => onChange(key, index)}
+          onChange={onChange(key, index, data)}
           className="edit-code"
         />
       </List.Item>;
@@ -77,7 +78,7 @@ export function renderForm({ data, key, index, form, onChange, disabled = false 
             disabled={disabled}
             value={data}
             placeholder={key}
-            onChange={onChange(key, index)}
+            onChange={onChange(key, index, data)}
           />
         </List.Item>
       );
@@ -91,7 +92,7 @@ export function renderForm({ data, key, index, form, onChange, disabled = false 
             .map((v) => getFormLabel(v))
             .join(' / ')}
         >
-          <Switch {...getFieldProps(key)} disabled={disabled} checked={data} onChange={onChange(key, index)} />
+          <Switch {...getFieldProps(key)} disabled={disabled} checked={data} onChange={onChange(key, index, data)} />
         </List.Item>
       );
       break;
@@ -118,7 +119,7 @@ export function renderForm({ data, key, index, form, onChange, disabled = false 
             }}
             value={data.toString()}
             placeholder={key}
-            onChange={() => onChange(key, index)}
+            onChange={() => onChange(key, index, data)}
           />
         </List.Item>
       );
@@ -139,7 +140,7 @@ export function renderForm({ data, key, index, form, onChange, disabled = false 
             {...getFieldProps(key)}
             value={data.toString()}
             placeholder={key}
-            onChange={onChange(key, index)}
+            onChange={onChange(key, index, data)}
           />
         </List.Item>
       );
