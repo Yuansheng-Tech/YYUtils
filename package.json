@@ -69,16 +69,6 @@
     "singleQuote": true
   },
   "dependencies": {
-    "@tarojs/components": "^3.3.7",
-    "@tarojs/taro": "^3.3.7",
-    "@tarojs/taro-weapp": "^2.2.10",
-    "js-cookie": "^2.2.1",
-    "lodash.isequal": "^4.5.0",
-    "lodash.mapkeys": "^4.6.0",
-    "lodash.mapvalues": "^4.6.0",
-    "qs": "^6.10.1",
-    "query-string": "^7.0.1",
-    "react": "^17.0.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
@@ -99,7 +89,18 @@
     "typedoc": "^0.20.36",
     "typescript": "^4.2.4"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "@tarojs/components": "^3.3.7",
+    "@tarojs/taro": "^3.3.7",
+    "@tarojs/taro-weapp": "^2.2.10",
+    "js-cookie": "^2.2.1",
+    "lodash.isequal": "^4.5.0",
+    "lodash.mapkeys": "^4.6.0",
+    "lodash.mapvalues": "^4.6.0",
+    "qs": "^6.10.1",
+    "query-string": "^7.0.1",
+    "react": "^17.0.2"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
