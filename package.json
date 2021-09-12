@@ -68,8 +68,6 @@
     "printWidth": 120,
     "singleQuote": true
   },
-  "dependencies": {
-  },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^13.1.0",
