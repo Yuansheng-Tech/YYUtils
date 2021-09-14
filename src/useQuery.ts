@@ -3,9 +3,9 @@ import Taro from '@tarojs/taro';
 import fetch from './fetch';
 
 export interface DataProviderQuery {
-  method: keyof Taro.request.method | undefined;
+  method?: keyof Taro.request.method | undefined;
   url: string;
-  body: object;
+  body?: object;
 }
 
 export interface UseQueryOptions {
@@ -52,7 +52,7 @@ export function useSafeSetState<T>(initialState: T): [T, React.Dispatch<React.Se
   return [state, safeSetState];
 }
 
-export const useQuery = (query: DataProviderQuery, options: UseQueryOptions): UseQueryValue => {
+export const useQuery = (query: DataProviderQuery, options: UseQueryOptions = {}): UseQueryValue => {
   const { method = 'GET', url, body = {} } = query;
   const { ...otherOptions } = options;
   // const version = userVersion();
