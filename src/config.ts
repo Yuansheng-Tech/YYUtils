@@ -1,5 +1,12 @@
 export const formLabel = {
   backgroundColor: '背景颜色',
+  color: '字体颜色',
+  icon: '图标',
+
+  tabList: '标签列表',
+  title: '标题',
+  value: '数值',
+  url: '跳转路径',
 
   id: 'ID',
   data: '数据',
