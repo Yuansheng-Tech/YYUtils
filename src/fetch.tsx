@@ -129,7 +129,7 @@ const fatchCallback = (res) => {
     });
     Taro.setStorageSync('accessToken', '');
     let path = getCurrentPageUrl();
-    if (!Taro.getStorageSync('notlogin') && path !== 'subPackages/pages/login/index') {
+    if (!Taro.getStorageSync('notlogin') && path !== '/pages/login/index') {
       // !Taro.getStorageSync("notlogin") &&
       Taro.showToast({
         title: '登录失效，请重新登录',
@@ -137,12 +137,12 @@ const fatchCallback = (res) => {
         duration: 2000,
       }).then((res) => {
         Taro.setStorageSync('notlogin', true);
-        // Taro.navigateTo({
-        //   url: "/subPackages/pages/login/index"
-        // });
+        Taro.navigateTo({
+          url: '/pages/login/index',
+        });
       });
     } else {
-      // Taro.setStorageSync("notlogin", false);
+      Taro.setStorageSync('notlogin', false);
     }
     return {};
   } else if (res && statusCodeData >= 400) {
