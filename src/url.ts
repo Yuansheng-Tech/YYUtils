@@ -31,6 +31,16 @@ class Url {
       });
     return result;
   };
+  /** 获取路径的参数 */
+  getParam = (param) => {
+    const params = qs.parseUrl(this.url);
+    const { query = {} } = params;
+    const result = query;
+    Object.keys(query).forEach((v) => {
+      result[v] = JSON.parse((query[v] || '').toString());
+    });
+    return result[param];
+  };
   /**
    * 替换 URL 的参数
    *
@@ -49,6 +59,32 @@ class Url {
     const url = qs.stringifyUrl({
       url: this.url,
       query: {
+        ...params,
+      },
+    });
+
+    return window.history.pushState(data, title, decodeURIComponent(url));
+  };
+
+  /**
+   * 替换 URL 的参数
+   *
+   * @param params
+   * @param data
+   * @param title
+   * @returns
+   */
+  setParams = (
+    params: object,
+    data: any = {
+      status: 0,
+    },
+    title: string = ''
+  ) => {
+    const url = qs.stringifyUrl({
+      url: this.url,
+      query: {
+        ...this.getParams(),
         ...params,
       },
     });

@@ -36,6 +36,26 @@ export const formLabel = {
   contacts: '联系人',
   phone: '手机号',
   notice: '提示',
+
+  dilivery_start_price: '起送时间',
+  dilivery_price: '配送费用',
+  distanceTime: '距离耗时',
+
+  defaultValue: '默认值',
+
+  total_sale: '总销售',
+  goods: '商品',
+  price: '价格',
+  original_price: '原价',
+
+  margin: '外变局',
+  padding: '内边距',
+  borderRadius: '圆角',
+  locationImage: '定位图片',
+  summary: '简介',
+  orderPrice: '订单价格',
+  num: '个数',
+  selected: '是否选中',
 };
 
 export const getFormLabel = (label) => {

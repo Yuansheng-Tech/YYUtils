@@ -98,7 +98,7 @@ function openVoiceFc(objs, returnAudio) {
         }
       })
       .catch((err) => {
-        console.log('获取语音tok接口失败');
+        console.log('获取语音tok接口失败', err);
       });
   }
 }
@@ -141,7 +141,7 @@ function btts(param, options, audioCallback, lineUp, returnAudio) {
       console.log('音频播放结束');
       console.log('销毁音频实例');
       audio.destroy(); //销毁音频实例
-      audio = null;
+      // audio = null;
     });
     audio.onError((e) => {
       if (audioCallback && audioCallback.onError && typeof audioCallback.onError == 'function')
@@ -149,7 +149,7 @@ function btts(param, options, audioCallback, lineUp, returnAudio) {
       console.log('音频播放错误: ' + JSON.stringify(e));
       console.log('销毁音频实例');
       audio.destroy(); //销毁音频实例
-      audio = null;
+      // audio = null;
     });
     return audio;
   }
@@ -183,7 +183,7 @@ function btts(param, options, audioCallback, lineUp, returnAudio) {
     console.log('音频播放结束');
     console.log('销毁音频实例');
     audio.destroy(); //销毁音频实例
-    audio = null;
+    // audio = null;
     if (audioCallback && audioCallback.onEnded && typeof audioCallback.onEnded == 'function') audioCallback.onEnded();
     if (lineUp !== false) {
       if (audioTeam.length > 0) {
@@ -201,7 +201,7 @@ function btts(param, options, audioCallback, lineUp, returnAudio) {
     console.log('音频播放错误: ' + JSON.stringify(e));
     console.log('销毁音频实例');
     audio.destroy(); //销毁音频实例
-    audio = null;
+    // audio = null;
   });
   audio.play();
 }

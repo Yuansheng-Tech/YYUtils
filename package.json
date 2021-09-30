@@ -36,12 +36,12 @@
     "dist/"
   ],
   "scripts": {
-    "start": "tsc -w --preserveWatchOutput",
     "prebuild": "del dist/* tsconfig.tsbuildinfo",
     "build": "tsc -p tsconfig.json",
     "docs": "typedoc",
-    "test": "",
-    "release": "np"
+    "release": "np",
+    "start": "tsc -w --preserveWatchOutput",
+    "test": ""
   },
   "husky": {
     "hooks": {
@@ -68,6 +68,9 @@
     "printWidth": 120,
     "singleQuote": true
   },
+  "dependencies": {
+    "lodash.mapkeys": "^4.6.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^13.1.0",
@@ -88,8 +91,8 @@
     "typescript": "^4.2.4"
   },
   "peerDependencies": {
-    "@tarojs/components": "^3.3.7",
-    "@tarojs/taro": "^3.3.7",
+    "@tarojs/components": "^3.3.9",
+    "@tarojs/taro": "^3.3.9",
     "@tarojs/taro-weapp": "^2.2.10",
     "js-cookie": "^2.2.1",
     "lodash.isequal": "^4.5.0",
