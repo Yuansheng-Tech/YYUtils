@@ -74,17 +74,29 @@ function fetch({
     data = JSON.stringify(data);
   }
 
+  const authenticate = Cookies.get('accessToken') || Taro.getStorageSync('accessToken');
+  const apikey = Cookies.get('APIKey') || Taro.getStorageSync('APIKey');
   return Taro.request({
     url,
     // mode: 'no-cors',
     // credentials: 'include',
     data,
     method,
-    header: {
-      'content-type': 'application/json; charset=utf-8',
-      Authorization: `Bearer ${Cookies.get('accessToken') || Taro.getStorageSync('accessToken')}`,
-      'X-Api-Key': `APIKey ${Cookies.get('APIKey') || Taro.getStorageSync('APIKey')}`, // `APIKey xxxx`,
-    },
+    header: Object.assign(
+      {
+        'content-type': 'application/json; charset=utf-8',
+      },
+      !!apikey
+        ? {
+            'X-Api-Key': `APIKey ${apikey}`,
+          }
+        : {},
+      !!authenticate
+        ? {
+            Authorization: `Bearer ${authenticate}`,
+          }
+        : {}
+    ),
   })
     .then((res) => {
       return fatchCallback(res);

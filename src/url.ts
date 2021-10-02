@@ -1,7 +1,7 @@
 import qs from 'query-string';
 import Taro from '@tarojs/taro';
 
-class Url {
+class YYUrl {
   /** 基本路径，可 new 的时候传入 */
   url: string;
   constructor(url = '') {
@@ -35,11 +35,7 @@ class Url {
   getParam = (param) => {
     const params = qs.parseUrl(this.url);
     const { query = {} } = params;
-    const result = query;
-    Object.keys(query).forEach((v) => {
-      result[v] = JSON.parse((query[v] || '').toString());
-    });
-    return result[param];
+    return query[param];
   };
   /**
    * 替换 URL 的参数
@@ -99,4 +95,4 @@ class Url {
   };
 }
 
-export default new Url();
+export default new YYUrl();
